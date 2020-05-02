@@ -5,4 +5,4 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 ENV FLASK_APP=galley.py
 EXPOSE 8000
-CMD gunicorn galley:app
+CMD gunicorn -w 4 -b 0.0.0.0:8000 galley:reporting

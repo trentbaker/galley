@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.7"
 
 volumes:
     prometheus_data: {}
@@ -22,5 +22,10 @@ services:
     image: galley
     ports:
       - "8000:8000"
-
-
+  grafana:
+    image: grafana/grafana
+    volumes:
+      - ./grafana/:/etc/grafana/
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "3000:3000"

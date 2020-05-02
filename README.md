@@ -2,14 +2,20 @@
 
 ## Development
 
-### Create and activate virtual environment
+### install virtual environment
 
 ```bash
 python3 -m venv .env
 source .env/bin/activate
+pip install --update pip
+pip install -r requirements.txt
 ```
 
 ### Update `requirements.txt`
+
+```zsh
+pip freeze >! requirements.txt
+```
 
 ```bash
 pip freeze > requirements.txt

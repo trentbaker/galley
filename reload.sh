@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 source .env/bin/activate
 pip freeze | grep -v pkg-resources > requirements.txt
 
