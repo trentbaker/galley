@@ -11,7 +11,7 @@ services:
       - ./prometheus/:/etc/prometheus/
       - prometheus_data:/prometheus
     ports:
-      - "9090:9090"
+      - "9090"
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
@@ -21,11 +21,11 @@ services:
   oven:
     image: galley
     ports:
-      - "8000:8000"
+      - "8000"
   grafana:
     image: grafana/grafana
     volumes:
-      - ./grafana/:/etc/grafana/
+      - ./grafana/config/:/etc/grafana/
       - grafana_data:/var/lib/grafana
     ports:
       - "3000:3000"
