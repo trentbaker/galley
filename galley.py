@@ -10,6 +10,3 @@ random_gauge = Gauge("random_value", "A Random Value")
 reporting = DispatcherMiddleware(app, {
     '/metrics': make_wsgi_app()
 })
-
-
-#oof
