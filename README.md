@@ -1,28 +1,29 @@
 # Galley
 
-## Development
+# Running
 
-### install virtual environment
+To run Galley, build from source and launch using the included `galley.sh`
 
 ```bash
-python3 -m venv .env
+./galley.sh deploy
+```
+
+# Development
+
+To develop Galley, the included `galley.sh` script can be used to set up the virtual environment
+
+```bash
+./galley.sh install
+```
+
+Then, activate the newly created virtual environment
+
+```bash
 source .env/bin/activate
-pip install --update pip
-pip install -r requirements.txt
 ```
 
-### Update `requirements.txt`
-
-```zsh
-pip freeze >! requirements.txt
-```
+To reload the containers with any new changes you've made, simply use the included `galley.sh`
 
 ```bash
-pip freeze > requirements.txt
-```
-
-### Install git hooks
-
-```bash
-cp -r hooks/* .git/hooks/
+./galley.sh reload
 ```
