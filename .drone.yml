@@ -9,6 +9,6 @@ steps:
   - name: build cookbook
     image: node
     commands:
-      - yarn install
-      - yarn build
+      - yarn --cwd cookbook install
+      - yarn --cwd cookbook build
 # further steps to come as other pieces are worked on
