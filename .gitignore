@@ -7,4 +7,4 @@ __pycache__
 
 # javascript
 node_modules/
-public/build/
+cookbook/public/build/

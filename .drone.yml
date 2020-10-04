@@ -1,0 +1,14 @@
+kind: pipeline
+type: docker
+name: galley
+volumes:
+  - name: docker_sock
+    host:
+      path: /var/run/docker.sock
+steps:
+  - name: build cookbook
+    image: node
+    commands:
+      - yarn install
+      - yarn build
+# further steps to come as other pieces are worked on
