@@ -1,4 +1,10 @@
+# python
 .env
 __pycache__
 
+# intellij
 .idea
+
+# javascript
+node_modules/
+public/build/
