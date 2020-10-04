@@ -1,4 +1,4 @@
-# Galley
+# Galley [![Build Status](https://drone.bltserver.com/api/badges/trentbaker/galley/status.svg)](https://drone.bltserver.com/trentbaker/galley)
 
 # Running
 
